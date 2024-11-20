@@ -18,6 +18,11 @@
     float: left;
 
 }
+@media (max-width: 999px){
+    #mainNav {
+    background-color: white;
+    }
+}
 
 .btn {
     background-color: #ff5c2f;
@@ -140,7 +145,7 @@
 
 .form-floating label {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 10px;
     transform: translateY(-50%);
     font-size: 1rem;
@@ -151,6 +156,7 @@
 
 .form-floating select {
     height: 83px;
+    
 }
 
 .form-floating input,
@@ -432,7 +438,9 @@ p .cname {
     margin-bottom: 88px;
 
 }
-
+.cname-inquire {
+    margin-top: -10px;
+}
 .card p {
     line-height: 44px;
     letter-spacing: 0.5px;
