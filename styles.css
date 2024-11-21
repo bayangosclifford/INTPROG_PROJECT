@@ -158,6 +158,13 @@ h2,
   }
 }
 
+@media (min-width: 1200px) {
+
+  .ss {
+    font-size: 3.5rem;
+  }
+}
+
 h3,
 .h3 {
   font-size: calc(1.3rem + 0.6vw);
@@ -12681,7 +12688,7 @@ hr.divider-light {
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   #mainNav .navbar-brand {
