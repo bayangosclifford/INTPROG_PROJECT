@@ -1,12 +1,13 @@
 /* CSS for the navigation */
 #mainNav {
-    background-color: rgba(0, 0, 0, 0);
+
     padding: 1rem;
     position: fixed;
     width: 100%;
     z-index: 1000;
     top: 0;
     display: flex;
+    background-color: rgba(0, 0, 0, 0.1);
 
 }
 
@@ -17,6 +18,20 @@
     font-weight: bold;
     float: left;
 
+}
+
+
+
+@media (max-width: 992px) {
+
+    #mainNav.scrolled {
+        background-color: white;
+        /* New background color when scrolled */
+    }
+
+    #mainNav {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 .btn {
@@ -52,22 +67,6 @@
     flex-direction: column;
 }
 
-/* Services 
-.services-section {
-    padding: 4rem 0;
-}
-
-.services-section h2 {
-    margin-bottom: 1rem;
-}
-
-.service {
-    display: inline-block;
-    width: 22%;
-    padding: 15px;
-    box-sizing: border-box;
-    vertical-align: top;
-}*/
 
 /* Testimonials */
 .testimonials-section {
@@ -90,10 +89,17 @@
 
 /* Call to action */
 .cta-section {
-    background-color: #333;
+    background-color: #edc2af;
     color: white;
     text-align: center;
     padding: 3rem 0;
+    height: 1000px;
+}
+
+@media (max-width: 1060px) {
+    .cta-section {
+        height: 1500px;
+    }
 }
 
 /* Contact Section */
@@ -140,7 +146,7 @@
 
 .form-floating label {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 10px;
     transform: translateY(-50%);
     font-size: 1rem;
@@ -210,6 +216,10 @@ button.btn:hover {
     font-size: 15px;
 }
 
+#inquire {
+    display: show;
+}
+
 /* Footer */
 footer {
     background-color: #f8f9fa;
@@ -224,18 +234,21 @@ footer {
     margin-top: 3rem;
     padding: 30px;
     text-align: center;
-    border: 5px solid blue;
+    color: #f66009;
+    font-size: 3.5rem;
+    text-decoration: underline;
+    text-decoration: color crimson;
+
 }
 
 .service-block-one {
     height: 350px;
     width: 250px;
     border-radius: 10px;
-    border: 3px solid green;
+    border: 1px solid rgba(47, 42, 42, 0.1);
     margin-top: 8%;
     margin-bottom: 13%;
-
-
+    box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 
@@ -243,16 +256,20 @@ footer {
     height: 350px;
     width: 250px;
     border-radius: 10px;
-    border: 3px solid green;
+    border: 1px solid rgba(47, 42, 42, 0.1);
     margin-top: 8%;
+    margin-bottom: 13%;
+    box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .service-block-three {
     height: 350px;
     width: 250px;
+    border: 1px solid rgba(47, 42, 42, 0.1);
     border-radius: 10px;
-    border: 3px solid green;
     margin-top: 8%;
+    margin-bottom: 13%;
+    box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .service-contain {
@@ -260,7 +277,8 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-evenly;
-    gap: 5px;
+    gap: 0;
+    margin: 5px 64px;
 }
 
 .services-section img {
@@ -278,7 +296,6 @@ footer {
     margin-bottom: 0%;
     margin-left: 10px;
     margin-right: 10px;
-    border: 5px solid violet;
     font-weight: bold;
 }
 
@@ -288,12 +305,10 @@ footer {
     /*margin-bottom: 0%;*/
     margin-left: 10px;
     margin-right: 10px;
-    border: 5px solid mediumseagreen;
 }
 
 .services-section #learnMore {
     margin-left: 25%;
-    border: 5px solid moccasin;
 }
 
 
@@ -304,6 +319,19 @@ footer {
     padding: 4rem 0;
     /*text-align: center;*/
     margin: 0 auto;
+}
+
+#portfolio .blog {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.blog h2 {
+    color: #f66009;
+    font-size: 3.5rem;
+    text-decoration: underline;
+    text-decoration: color crimson;
 }
 
 q .portfolio-item .portfolio-caption {
@@ -368,21 +396,30 @@ q .portfolio-item .portfolio-caption {
 }
 
 .groupname {
-    font-family: 'Times New Roman', Times, serif;
+    height: 10vh;
     text-align: center;
-    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FF6600;
+    font-size: 3.5em;
+    margin-bottom: 10px;
     font-weight: bold;
-    padding-top: 30px;
 
+}
+
+.groupname h2 {
+    color: #FF6600;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /* --- About Us ---- */
-.card p {
-    color: black;
-}
 
 .mycard {
-    min-height: 50vh;
+    min-height: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -403,7 +440,7 @@ q .portfolio-item .portfolio-caption {
     align-items: center;
     margin-top: 100px;
     background-color: #f8f9fa;
-    height: 200px;
+    height: 300px;
     word-wrap: break-word;
 }
 
@@ -434,6 +471,7 @@ p .cname {
 }
 
 .card p {
+    color: #000;
     line-height: 44px;
     letter-spacing: 0.5px;
     margin-bottom: 12px;
@@ -511,4 +549,110 @@ p .cname {
     align-items: center;
     width: 800px;
     height: 973px;
+}
+
+/*-- Feedback --- */
+.testimonials-section {
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+.testimonial-header h2 {
+    color: #FF6600;
+    font-size: 3.5em;
+    margin-bottom: 50px;
+}
+
+.slideshow-container {
+    max-width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade:not(.show) {
+    opacity: 100%;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    border: 3px solid #FF6600;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    gap: 50px;
+    max-width: 70%;
+}
+
+.image-box {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.testimonial-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid #000;
+}
+
+.testimonial-text-wrapper {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.testimonial-text {
+    font-size: 2em;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.author {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FF6600;
+}
+
+.dots-container {
+    margin-top: 20px;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    margin: 0 8px;
+    background-color: #FF6600;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333333;
 }
